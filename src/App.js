@@ -1,9 +1,7 @@
 import React from 'react';
 
 function App() {
-  return (
-    <div>Movie Db</div>
-  );
+  return <div>Movie Db</div>;
 }
 
 export default App;
