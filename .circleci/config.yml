@@ -117,7 +117,7 @@ jobs:
               aws cloudfront create-invalidation --distribution-id ${DEV_DISTRIBUTION_ID} --paths /\*
             fi
 
-    notify-via-slack:
+    notify-slack:
       executor: slack-executor
       steps:
       - run: echo "Slack notification"
@@ -216,7 +216,7 @@ workflows:
                 - develop
                 - staging
                 - master
-      - notify-via-slack:
+      - notify-slack:
           requires:
             - deploy-to-aws-cloudfront
           filters:
