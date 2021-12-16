@@ -120,7 +120,7 @@ jobs:
     notify-via-slack:
       executor: slack-executor
       steps:
-      - run: echo "Slack notification"
+      - run: echo "Slacknotification"
       - slack/notify:
           event: 'always'
           channel: 'moviedb-circleci'
@@ -216,13 +216,13 @@ workflows:
                 - develop
                 - staging
                 - master
-      # - notify-via-slack:
-      #     requires:
-      #       - deploy-to-aws-cloudfront
-      #     filters:
-      #       branches:
-      #         only:
-      #           - develop
-      #           - staging
-      #           - master           
+      - notify-via-slack:
+          requires:
+            - deploy-to-aws-cloudfront
+          filters:
+            branches:
+              only:
+                - develop
+                - staging
+                - master           
 
