@@ -117,7 +117,7 @@ jobs:
               aws cloudfront create-invalidation --distribution-id ${DEV_DISTRIBUTION_ID} --paths /\*
             fi
 
-  otify-via-slack:
+  notify-via-slack:
     executor: slack-executor
     steps:
       - slack/notify:
