@@ -1,18 +1,16 @@
 
 orbs: 
-  slack: circleci/slack@4.5.1
-
+  slack: circleci/slack@4.2.0
 version: 2.1
-
 executors:
   app-executor:
     docker:
       - image: circleci/node:14.18.1
     working_directory: ~/repo
   slack-executor:
-    notify:
     docker:
       - image: 'cibuilds/base:latest' 
+    resource_class: small
   terraform-executor:
     docker:
       - image:  hashicorp/terraform:latest
