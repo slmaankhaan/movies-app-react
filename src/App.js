@@ -1,7 +1,13 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import './App.css';
 
-function App() {
-  return <div>Movie Db</div>;
-}
-
+const App = () => {
+  return (
+    <Provider store={store}>
+      <div className="app">Setup Redux</div>
+    </Provider>
+  );
+};
 export default App;
