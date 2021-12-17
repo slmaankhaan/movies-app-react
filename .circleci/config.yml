@@ -1,7 +1,8 @@
+
+version: 2.1
 orbs: 
   slack: circleci/slack@4.5.1
 
-version: 2.1
 executors:
   app-executor:
     docker:
