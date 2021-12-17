@@ -7,9 +7,9 @@ executors:
     docker:
       - image: circleci/node:14.18.1
     working_directory: ~/repo
-  # slack-executor:
-  #   docker:
-  #     - image: 'cibuilds/base:latest' 
+  slack-executor:
+    docker:
+      - image: 'cibuilds/base:latest' 
   terraform-executor:
     docker:
       - image:  hashicorp/terraform:latest
