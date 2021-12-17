@@ -182,10 +182,10 @@ jobs:
               aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths /\*
             fi
 
-    notify-via-slack:
-      executor: slack-executor
-      steps:
-      - run: echo "Slacknotification"
+  notify-via-slack:
+    executor: slack-executor
+    steps:
+      - run: echo "Slack notification"
       - slack/notify:
           event: 'always'
           channel: 'moviedb-circleci'
